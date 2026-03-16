@@ -1,0 +1,111 @@
+1️⃣ What is Web Scraping?
+
+Web scraping means extracting data from websites automatically using code.
+
+Example uses:
+
+Collect product prices
+
+Gather news headlines
+
+Research data collection
+
+Job listing analysis
+
+Instead of copying manually, Python can fetch and extract data automatically.
+
+2️⃣ Libraries Used for Web Scraping
+
+Most common libraries:
+
+requests → download webpage
+
+BeautifulSoup → extract data from HTML
+
+Install:
+
+pip install requests
+pip install beautifulsoup4
+3️⃣ Download a Web Page
+
+Example:
+
+import requests
+
+url = "https://example.com"
+
+response = requests.get(url)
+
+print(response.text)
+
+This prints the HTML code of the webpage.
+
+4️⃣ Parsing HTML with BeautifulSoup
+from bs4 import BeautifulSoup
+import requests
+
+url = "https://example.com"
+
+response = requests.get(url)
+
+soup = BeautifulSoup(response.text, "html.parser")
+
+print(soup.title.text)
+
+Output:
+
+Example Domain
+5️⃣ Extract All Links
+for link in soup.find_all("a"):
+    print(link.get("href"))
+
+This prints all links on the page.
+
+6️⃣ Extract Specific Data
+
+Example: Get all headings
+
+for heading in soup.find_all("h1"):
+    print(heading.text)
+7️⃣ Why Web Scraping is Powerful
+
+Used in:
+
+Data science
+
+Market research
+
+Automation
+
+AI datasets
+
+Business analytics
+
+Many companies use Python scraping bots.
+
+🧠 Memory Trick
+requests → download page
+BeautifulSoup → read HTML
+find_all() → extract elements
+📝 Practice Tasks
+
+1️⃣ Install BeautifulSoup
+2️⃣ Scrape title from:
+
+https://example.com
+
+3️⃣ Print all links from the page
+
+4️⃣ Print all <h1> headings
+
+🚀 Coming Next (Very Important)
+
+Next lessons will include:
+
+Automation scripts with Python
+
+Mini Python projects
+
+Real developer workflows
+
+These will make you industry-ready.
