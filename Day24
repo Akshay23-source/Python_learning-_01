@@ -1,0 +1,99 @@
+1️⃣ What is Automation?
+
+Automation = using Python to do repetitive tasks automatically
+
+Instead of doing manually, Python does it for you.
+
+🔥 Real-Life Examples
+
+Rename 100 files in seconds
+
+Send automatic emails
+
+Organize folders
+
+Download data automatically
+
+WhatsApp/email bots
+
+2️⃣ File Automation Example
+
+👉 Rename all files in a folder
+
+import os
+
+folder_path = "your_folder_path"
+
+files = os.listdir(folder_path)
+
+for i, file in enumerate(files):
+    old_name = os.path.join(folder_path, file)
+    new_name = os.path.join(folder_path, f"file_{i}.txt")
+    
+    os.rename(old_name, new_name)
+3️⃣ Automating File Organization
+import os
+import shutil
+
+source = "your_folder"
+
+for file in os.listdir(source):
+    if file.endswith(".jpg"):
+        shutil.move(file, "images/")
+4️⃣ Sending Email (Basic Idea)
+import smtplib
+
+Used to:
+
+send notifications
+
+automate reports
+
+alerts
+
+5️⃣ Open Website Automatically
+import webbrowser
+
+webbrowser.open("https://google.com")
+6️⃣ Why Automation is Powerful?
+
+Used in:
+
+companies (save time)
+
+startups
+
+data pipelines
+
+cloud systems
+
+daily life productivity
+
+🧠 Memory Trick
+
+os → file operations
+
+shutil → move/copy files
+
+webbrowser → open sites
+
+automation = save time
+
+📝 Practice Tasks
+
+1️⃣ Rename 5 files automatically
+2️⃣ Move .txt files to a new folder
+3️⃣ Open 3 websites using Python
+4️⃣ Create script that prints system files
+
+🚀 What’s Next (Final Stage)
+
+Next lessons will be:
+
+Mini Projects (VERY IMPORTANT)
+
+Resume-level Python projects
+
+Interview-ready coding
+
+This is where you become job-ready.
