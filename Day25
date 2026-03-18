@@ -1,0 +1,101 @@
+🎯 Project Goal
+
+Create a Python script that:
+
+Automatically organizes files into folders
+
+Example:
+
+Images → images/
+
+Text files → docs/
+
+Videos → videos/
+
+🧠 Concept Used
+
+os → file handling
+
+shutil → move files
+
+loops
+
+conditions
+
+👉 This project combines real skills.
+
+🛠️ Step-by-Step Code
+import os
+import shutil
+
+source_folder = "your_folder_path"
+
+# Folder names
+folders = {
+    "images": [".jpg", ".png"],
+    "docs": [".txt", ".pdf"],
+    "videos": [".mp4", ".mkv"]
+}
+
+for file in os.listdir(source_folder):
+    file_path = os.path.join(source_folder, file)
+
+    if os.path.isfile(file_path):
+        for folder, extensions in folders.items():
+            if file.endswith(tuple(extensions)):
+                
+                dest_folder = os.path.join(source_folder, folder)
+
+                if not os.path.exists(dest_folder):
+                    os.makedirs(dest_folder)
+
+                shutil.move(file_path, dest_folder)
+📌 How It Works
+
+1️⃣ Loop through all files
+2️⃣ Check file type
+3️⃣ Create folder if not exists
+4️⃣ Move file to correct folder
+
+🔥 Example
+
+Before:
+
+folder/
+  photo.jpg
+  video.mp4
+  notes.txt
+
+After:
+
+folder/
+  images/photo.jpg
+  videos/video.mp4
+  docs/notes.txt
+🧠 Memory Trick
+os.listdir() → get files  
+os.path → manage paths  
+shutil.move() → move files  
+📝 Practice Tasks (Important)
+
+1️⃣ Add support for:
+
+.docx
+
+.xlsx
+
+2️⃣ Print message:
+
+Moved file: photo.jpg → images/
+
+3️⃣ Handle unknown files → move to others/
+
+🚀 Why This Project Matters
+
+This is:
+
+Resume project ✅
+
+Automation skill ✅
+
+Real-world use ✅
